@@ -34,6 +34,7 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
+import javax.swing.filechooser.FileFilter;
 
 import com.mojang.nbt.NBTCompoundTag;
 import com.mojang.nbt.NBTTag;
@@ -123,6 +124,25 @@ public class Converter extends JFrame
         
         parse.addActionListener(e -> {
             JFileChooser chooser = new JFileChooser();
+            chooser.setFileFilter(new FileFilter()
+            {
+                @Override
+                public boolean accept(File f)
+                {
+                    if(f.isDirectory())
+                    {
+                        return true;
+                    }
+                    final String name = f.getName();
+                    return name.endsWith(".schematic") || name.endsWith(".SCHEMATIC");
+                }
+                
+                @Override
+                public String getDescription()
+                {
+                    return "*.schematic,*.SCHEMATIC";
+                }
+            });
             if(JFileChooser.APPROVE_OPTION == chooser.showOpenDialog(mainPane))
             {
                 File file = chooser.getSelectedFile();
@@ -188,8 +208,8 @@ public class Converter extends JFrame
                                 // quote = "";
                                 // }
                                 
-                                intList = intList + "{" + x + "," + y + "," + z + "," + blockMetadataID + "}";
-                                blockNameList = blockNameList + "\"" + block + "\"";
+                                intList = intList + "{" + x + "," + y + "," + z + "," + blockMetadataID + "},";
+                                blockNameList = blockNameList + "\"" + block + "\",";
                                 
                                 // if(blockMetadataID != 0)
                                 // {
@@ -254,7 +274,7 @@ public class Converter extends JFrame
                                 {
                                     try
                                     {
-                                        bufferedWritter.write(aLine.replaceAll("#intList", intList));
+                                        bufferedWritter.write(aLine.replaceAll("#intList", intList).replace(",};", "};"));
                                         bufferedWritter.newLine();
                                     }
                                     catch(OutOfMemoryError ex)
@@ -267,7 +287,7 @@ public class Converter extends JFrame
                                 {
                                     try
                                     {
-                                        bufferedWritter.write(aLine.replaceAll("#blockNameList", blockNameList));
+                                        bufferedWritter.write(aLine.replaceAll("#blockNameList", blockNameList).replace(",};", "};"));
                                         bufferedWritter.newLine();
                                     }
                                     catch(OutOfMemoryError ex)
