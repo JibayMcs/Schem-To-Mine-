@@ -1,0 +1,28 @@
+package your.packageName.here;
+
+import java.util.Random;
+
+import net.minecraft.block.Block;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
+
+/**
+ * File Generated with Schem' To Mine' Tool, thanks for this use !
+ * 
+ * @authors jglrxavpok & ZeAmateis
+ * 
+ * @version #Version
+ */
+
+public class #ClassName extends WorldGenerator {
+	
+	@Override 
+	public boolean generate(World world, Random random, BlockPos pos) {
+	
+		#GeneratedFunction
+		
+		return true;
+	}
+	
+}

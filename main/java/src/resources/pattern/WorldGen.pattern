@@ -1,0 +1,39 @@
+package your.packageName.here;
+
+import java.util.Random;
+
+import net.minecraft.block.Block;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
+
+/**
+ * File Generated with Schem' To Mine' Tool, thanks for this use !
+ * 
+ * @authors jglrxavpok & ZeAmateis
+ * 
+ * @version #Version
+ */
+
+public class #ClassName extends WorldGenerator {
+	
+	@Override 
+	public boolean generate(World world, Random random, BlockPos pos) {
+	
+		int[][] intList = new int[][]{#intList};
+		String[] blockNameList = new String[]{#blockNameList};
+	
+		for (int i = 0; i < intList.length(); i++){
+			
+			if (intList[i][3] != 0){
+			world.setBlockState(pos.add(intList[i][0], intList[i][1], intList[i][2]), Block.getBlockFromName(blockNameList[i]).getStateFromMeta(intList[i][3]));
+			}
+			else{
+				world.setBlockState(pos.add(intList[i][0], intList[i][1], intList[i][2]), Block.getBlockFromName(blockNameList[i]).getDefaultState());
+			}
+		}
+		
+		return true;
+	}
+	
+}

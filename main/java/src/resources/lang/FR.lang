@@ -1,0 +1,41 @@
+#################################################
+# ------------------ CRÉDITS ------------------ #
+#                                               #
+# Traductions françaises par utybo              #
+# Ce fichier est utilisé par MinkJ (API de lo-  #
+# calisaton)                                    #
+#                                               #
+#                                               #
+# ------------------ MODÈLE ------------------- #
+#                                               #
+# Les commentaires commencent par un #          #
+# Le modèle est cle.ici=Traduction ici          #
+# Ne pas mettre d'espace à coté du =            #
+#################################################
+
+# UI
+browse=Chercher...
+convert=Conversion !
+convertAirBlock=Ne pas convertir les blocs d'air
+convertInProgress=Conversion en cours...
+openGeneratedFile=Ouvrir le fichier généré
+credits=Crédits
+
+# Popup Messages
+error=Erreur !
+success=Succès !
+warning=Attention !
+information=Information
+
+errorFileLoad=Erreur au chargement du fichier:
+outOfMemory=Pas assez de R.A.M !
+successFileGen=Génération du fichier de la structure avec succès !
+errorFileGen=Erreur lors de la génération du fichier de la structure:
+errorOpeningFile=Erreur lors de l'ouverture du fichier:
+errorOpeningURL=Erreur lors de l'accès à l'URL:
+errorDragDrop=Erreur lors du glisser/déposer:
+noFileGenerated=Aucun fichier de structure généré
+notASchematic=Ce n'est pas un fichier .schematic !
+
+# Credits
+creditsText=<html><br><center><br><u>Merci à toutes les personnes qui utiliseront cet outil !</u> &#9829;<br><br>Base de tout le code écrite par le Grand <b><i>jglrxavpok</b></i> !<br><br>Adaptation du code pour Minecraft 1.8 et mises à jour par <b><i>ZeAmateis</b></i><br><br>Système de traduction par <b><i>Utybo</b></i><br><br><i>Projet initial pour la <i>Communauté Minecraft Forge France !</i><br><br><br><br></center></html>

@@ -1,0 +1,41 @@
+#################################################
+# ------------------ CREDITS ------------------ #
+#                                               #
+# English translations by utybo & the FFMT      #
+# This file is used by MinkJ (Localization API) #
+#                                               #
+#                                               #
+#                                               #
+# ------------------- MODEL ------------------- #
+#                                               #
+# Comments start with a #                       #
+# The model is key.here=Translation here        #
+# Do not put any space beside the =             #
+#################################################
+
+# UI
+browse=Browse...
+convert=Convert !
+convertAirBlock=Do not convert air blocks
+convertInProgress=Converting in progress...
+openGeneratedFile=Open generated file
+credits=Credits
+
+# Popup Messages
+error=Error !
+success=Success !
+warning=Warning !
+information=Information
+
+errorFileLoad=Error on loading file:
+outOfMemory=Out of Memory !
+successFileGen=Structure file generated with success !
+errorFileGen=Error on generating structure file:
+errorOpeningFile=Error on opening file:
+errorOpeningURL=Cannot access to URL:
+errorDragDrop=Error on drag n' drop:
+noFileGenerated=No structure file generated
+notASchematic=This is not a .schematic file !
+
+# Credits
+creditsText=<html><br><center><br><u>Thanks to all people who used this tool !</u> &#9829;<br><br>Base code written by the Great <b><i>jglrxavpok</b></i> !<br><br>Minecraft 1.8 code adpatation & json files by <b><i>ZeAmateis</b></i><br><br>Translation system by <b><i>Utybo</b></i><br><br><i>Initial project for the <i>Minecraft Forge France Community !</i><br><br><br><br></center></html>
